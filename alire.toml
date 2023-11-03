@@ -1,0 +1,16 @@
+name = "open_url"
+description = "Open \"*.url\" files under Linux"
+version = "0.1.0-dev"
+
+authors = ["Manuel Gomez"]
+maintainers = ["Manuel Gomez <mgrojo@gmail.com>"]
+maintainers-logins = ["mgrojo"]
+licenses = "MIT"
+website = "https://github.com/mgrojo/open_url"
+tags = ["url", "open", "xdg", "browser"]
+
+[[depends-on]]
+spawn = "^23.0.0"
+
+[[depends-on]]
+ini_files = "^10.0.0"

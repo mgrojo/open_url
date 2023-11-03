@@ -1,0 +1,22 @@
+with "config/open_url_config.gpr";
+project Open_Url is
+
+   for Source_Dirs use ("src/", "config/");
+   for Object_Dir use "obj/" & Open_Url_Config.Build_Profile;
+   for Create_Missing_Dirs use "True";
+   for Exec_Dir use "bin";
+   for Main use ("open_url.adb");
+
+   package Compiler is
+      for Default_Switches ("Ada") use Open_Url_Config.Ada_Compiler_Switches;
+   end Compiler;
+
+   package Binder is
+      for Switches ("Ada") use ("-Es"); --  Symbolic traceback
+   end Binder;
+
+   package Install is
+      for Artifacts (".") use ("share");
+   end Install;
+
+end Open_Url;
