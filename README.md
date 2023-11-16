@@ -3,8 +3,6 @@
 [![Download][download-img]][download]
 
 
-[![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/ada-lang/Lobby)
-
 `open_url` is a small utility to open "*.url" files under GNU/Linux.
 
 These files are Ini files used in Windows, which have this format:
@@ -44,3 +42,7 @@ chmod +x open_url
 ```
 Usage: open_url <file.url>
 ```
+
+
+  [download-img]: https://img.shields.io/github/downloads/mgrojo/open_url/total.svg
+  [download]: https://github.com/mgrojo/open_url/releases

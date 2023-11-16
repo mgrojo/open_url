@@ -7,6 +7,8 @@ on:
   pull_request:
     branches: [ main ]
 
+permissions: write-all
+
 jobs:
   build:
     name: CI on ${{ matrix.os }}
@@ -15,7 +17,7 @@ jobs:
 
     strategy:
       matrix:
-        os: [macos-latest, ubuntu-latest]
+        os: [ubuntu-20.04, ubuntu-latest]
 
     steps:
        - name: Checkout
