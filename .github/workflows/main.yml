@@ -36,7 +36,6 @@ jobs:
          run: alr index --update-all
        - name: Build
          run: alr --non-interactive build
-
   release:
     name: Continuous AppImage
     runs-on: ubuntu-20.04
