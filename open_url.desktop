@@ -4,6 +4,7 @@ Comment=Open *.url files under Linux
 Exec=open_url
 Icon=open_url
 Terminal=false
+X-MultipleArgs=false
 Type=Application
 Categories=Utility
-
+MimeType=application/x-mswinurl;

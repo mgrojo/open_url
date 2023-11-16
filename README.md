@@ -1,4 +1,9 @@
 [![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/ada-lang/Lobby)
+[![Build](https://github.com/mgrojo/open_url/actions/workflows/main.yml/badge.svg)](https://github.com/mgrojo/open_url/actions/workflows/main.yml)
+[![Download][download-img]][download]
+
+
+[![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/ada-lang/Lobby)
 
 `open_url` is a small utility to open "*.url" files under GNU/Linux.
 
@@ -26,7 +31,16 @@ alr install
 Refer to Alire documentation on how to add the Alire default installation to the PATH variable
 or how  to change the default installation prefix.
 
-# How to run
+# Use a pre-built AppImage version
+
+You can download a pre-build AppImage from the Releases section in GitHub. For using the file,
+give it execution permissions and rename it to `open_url`.
 ```sh
+mv Open_URL-x86_64.AppImage open_url
+chmod +x open_url
+```
+
+# How to run
+```
 Usage: open_url <file.url>
 ```
