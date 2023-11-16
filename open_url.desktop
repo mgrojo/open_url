@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Open URL
 Comment=Open *.url files under Linux
-Exec=open_url
+Exec=open_url %f
 Icon=open_url
 Terminal=false
 X-MultipleArgs=false

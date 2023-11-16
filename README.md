@@ -31,18 +31,31 @@ or how  to change the default installation prefix.
 
 # Use a pre-built AppImage version
 
-You can download a pre-build AppImage from the Releases section in GitHub. For using the file,
+You can download a pre-built AppImage from the Releases section in GitHub. For using the file,
 give it execution permissions and rename it to `open_url`.
 ```sh
-mv Open_URL-x86_64.AppImage open_url
+mv Open_URL-x86_64.AppImage ~/.local/bin/open_url
 chmod +x open_url
 ```
 
 # How to run
+From the command line:
 ```
 Usage: open_url <file.url>
 ```
 
+If you want to open the URL files from the graphical file manager, put
+`open_url` in the `PATH` for programs and the `open_url.desktop` file
+in one of the standard location for desktop files. For example:
+
+```sh
+mv open_url ~/.local/bin/
+cp open_url.desktop ~/.local/share/applications/
+update-desktop-database
+```
+
+Then, from the file manager, you should be able to select _Open URL_ as
+application to open `*.url` files.
 
   [download-img]: https://img.shields.io/github/downloads/mgrojo/open_url/total.svg
   [download]: https://github.com/mgrojo/open_url/releases
