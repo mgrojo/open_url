@@ -26,9 +26,7 @@ jobs:
            distrib: community
            target: native
        - name: alire-project/setup-alire
-         uses: alire-project/setup-alire@v1
-         with:
-           version: 1.2.1
+         uses: alire-project/setup-alire@v2
        - name: Update apt
          if: runner.os == 'Linux'
          run: sudo apt-get update
@@ -58,9 +56,12 @@ jobs:
          run: alr --non-interactive build
        - name: Build AppImage
          run: VERSION=${GITHUB_BASE_REF:-${GITHUB_REF#refs/heads/}} make AppImage
-       - name: Release
-         uses: softprops/action-gh-release@v1
+       - name: Create Release
+         uses: ncipollo/release-action@v1
          with:
-           files: Open_URL*.AppImage
-           prerelease: true
-           tag_name: continuous
+           allowUpdates: True
+           tag: continuous
+           name: Continuous build
+           prerelease: True
+           artifacts: "Open_URL*.AppImage"
+           token: ${{ secrets.GITHUB_TOKEN }}
