@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Open URL
+Comment=Open *.url files under Linux
+Exec=open_url
+Icon=open_url
+Terminal=false
+Type=Application
+Categories=Utility
+
