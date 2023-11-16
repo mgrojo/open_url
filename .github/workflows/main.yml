@@ -58,9 +58,9 @@ jobs:
          run: alr --non-interactive build
        - name: Build AppImage
          run: VERSION=${GITHUB_BASE_REF:-${GITHUB_REF#refs/heads/}} make AppImage
-      - name: Release
-        uses: softprops/action-gh-release@v1
-        with:
-          files: Open_URL*.AppImage
-          prerelease: true
-          tag_name: continuous
+       - name: Release
+         uses: softprops/action-gh-release@v1
+         with:
+           files: Open_URL*.AppImage
+           prerelease: true
+           tag_name: continuous
