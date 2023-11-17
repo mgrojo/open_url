@@ -3,7 +3,7 @@
 [![Download][download-img]][download]
 
 
-`open_url` is a small utility to open "*.url" files under GNU/Linux.
+`open_url` is a small utility to open [`*.url`](https://www.cyanwerks.com/formats/file-format-url.html) files under GNU/Linux.
 
 These files are Ini files used in Windows, which have this format:
 ```
