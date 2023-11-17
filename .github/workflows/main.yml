@@ -57,13 +57,9 @@ jobs:
        - name: Build
          run: alr --non-interactive build
        - name: Build AppImage
-         run: VERSION=${GITHUB_BASE_REF:-${GITHUB_REF#refs/heads/}} make AppImage
-       - name: Create Release
-         uses: ncipollo/release-action@v1
+         run: VERSION=$(printf "dev-`git -C . rev-parse --short HEAD`") make AppImage
+       - name: Upload artifacts
+         uses: actions/upload-artifact@v3
          with:
-           allowUpdates: True
-           tag: continuous
-           name: Continuous build
-           prerelease: True
-           artifacts: "Open_URL*.AppImage"
-           token: ${{ secrets.GITHUB_TOKEN }}
+           name: build-artifacts
+           path: Open_URL*.AppImage
