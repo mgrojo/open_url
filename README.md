@@ -37,6 +37,10 @@ give it execution permissions and rename it to `open_url`.
 mv Open_URL-x86_64.AppImage ~/.local/bin/open_url
 chmod +x open_url
 ```
+To build the AppImage version yourself, just run:
+```sh
+make AppImage
+```
 
 # How to run
 From the command line:
@@ -44,7 +48,11 @@ From the command line:
 Usage: open_url <file.url>
 ```
 
-If you want to open the URL files from the graphical file manager, put
+If you want to open the URL files from the graphical file manager, you have to integrate
+`open_url` in your desktop environment. One way is to use [AppImageLauncher](https://github.com/TheAssassin/AppImageLauncher)
+to integrate the AppImage version.
+
+Alternatively, you can perform the integration manually: put
 `open_url` in the `PATH` for programs and the `open_url.desktop` file
 in one of the standard location for desktop files. For example:
 
