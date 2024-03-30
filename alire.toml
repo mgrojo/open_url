@@ -9,8 +9,13 @@ licenses = "MIT"
 website = "https://github.com/mgrojo/open_url"
 tags = ["url", "open", "xdg", "browser"]
 
+executables = ["open_url"]
+
 [[depends-on]]
 spawn = "^23.0.0"
 
 [[depends-on]]
 ini_files = "^10.0.0"
+
+[[depends-on]]
+asfml = "^2.5.4"

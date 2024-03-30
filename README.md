@@ -14,6 +14,11 @@ URL=https://github.com/mgrojo/open_url
 `open_url` uses `xdg-open` (from the `xdg-utils` package in Debian/Ubuntu) to actually open the
 URL in your favorite browser.
 
+Aternatively, if you pass the `--clipboard` argument instead of a
+file, the URL is read from the clipboard. You can use this mode to
+easily open non-clickable URLs from some text. It is recommended to
+bind the tool execution to a keyboard shortcut in your desktop
+environment.
 
 # How to build
 
@@ -34,14 +39,14 @@ or how  to change the default installation prefix.
 You can download a pre-built AppImage from the Releases section in GitHub. For using the file,
 give it execution permissions and rename it to `open_url`.
 ```sh
+chmod +x Open_URL-x86_64.AppImage
 mv Open_URL-x86_64.AppImage ~/.local/bin/open_url
-chmod +x open_url
 ```
 
 # How to run
 From the command line:
 ```
-Usage: open_url <file.url>
+Usage: open_url <file.url> | --clipboard
 ```
 
 If you want to open the URL files from the graphical file manager, put

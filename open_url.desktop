@@ -6,5 +6,6 @@ Icon=open_url
 Terminal=false
 X-MultipleArgs=false
 Type=Application
+Keywords=url;open;xdg;browser;
 Categories=Utility
 MimeType=application/x-mswinurl;
