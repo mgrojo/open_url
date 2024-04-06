@@ -26,7 +26,7 @@ The tool can be installed using Alire 2.0 with this command:
 ```
 alr install
 ```
-Refer to Alire documentation on how to add the Alire default installation to the PATH variable
+Refer to Alire documentation on how to add the Alire default installation to the `PATH` variable
 or how  to change the default installation prefix.
 
 # Use a pre-built AppImage version
@@ -54,7 +54,7 @@ to integrate the AppImage version.
 
 Alternatively, you can perform the integration manually: put
 `open_url` in the `PATH` for programs and the `open_url.desktop` file
-in one of the standard location for desktop files. For example:
+in one of the standard locations for desktop files, for example:
 
 ```sh
 mv open_url ~/.local/bin/
