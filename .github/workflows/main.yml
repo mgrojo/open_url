@@ -41,25 +41,7 @@ jobs:
     name: Continuous AppImage
     runs-on: ubuntu-20.04
     steps:    
-       - name: Checkout
-         uses: actions/checkout@v2
-       - name: ada-actions/toolchain
-         uses: ada-actions/toolchain@ce2021
+       - name: alr2appimage-action
+         uses: mgrojo/alr2appimage-action@main
          with:
-           distrib: community
-           target: native
-       - name: alire-project/setup-alire
-         uses: alire-project/setup-alire@v1
-       - name: Update apt
-         run: sudo apt-get update
-       - name: Update
-         run: alr index --update-all
-       - name: Build
-         run: alr --non-interactive build
-       - name: Build AppImage
-         run: VERSION=$(printf "dev-`git -C . rev-parse --short HEAD`") make AppImage
-       - name: Upload artifacts
-         uses: actions/upload-artifact@v3
-         with:
-           name: build-artifacts
-           path: Open_URL*.AppImage
+          alr2appimageVersion: 0.9.3
