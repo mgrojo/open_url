@@ -40,8 +40,10 @@ jobs:
   release:
     name: Continuous AppImage
     runs-on: ubuntu-20.04
-    steps:    
+    steps:
+       - name: Checkout
+         uses: actions/checkout@v2
        - name: alr2appimage-action
          uses: mgrojo/alr2appimage-action@main
          with:
-          alr2appimageVersion: 0.9.3
+           alr2appimageVersion: 0.9.3
