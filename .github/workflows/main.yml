@@ -47,4 +47,4 @@ jobs:
          uses: mgrojo/alr2appimage-action@main
          with:
            alr2appimageVersion: 0.9.3
-           alr2appimageArgs: ""
+           alr2appimageArgs: "--executable open_url"
