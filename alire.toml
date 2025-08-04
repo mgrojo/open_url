@@ -8,6 +8,7 @@ maintainers-logins = ["mgrojo"]
 licenses = "MIT"
 website = "https://github.com/mgrojo/open_url"
 tags = ["url", "open", "xdg", "browser"]
+executables = ["open_url"]
 
 [[depends-on]]
 spawn = "^23.0.0"
