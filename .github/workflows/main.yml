@@ -1,51 +1,21 @@
-# Build using Alire.
-name: Build
+# Build using Alire and upload an AppImage to the GitHub releases section.
+name: Build and upload AppImage
 
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+on:                    # Run the workflow for each of the following events:
+  push:                # - A branch is pushed or updated.
+  pull_request:        # - A pull-request is opened or updated.
+  workflow_dispatch:   # - A manual run of the workflow is requested from the GitHub web interface.
+  release:
+    types: [created]   # - A release is created.
 
 permissions: write-all
 
 jobs:
-  build:
-    name: CI on ${{ matrix.os }}
-
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      matrix:
-        os: [ubuntu-20.04, ubuntu-latest]
-
-    steps:
-       - name: Checkout
-         uses: actions/checkout@v2
-       - name: ada-actions/toolchain
-         uses: ada-actions/toolchain@ce2021
-         with:
-           distrib: community
-           target: native
-       - name: alire-project/setup-alire
-         uses: alire-project/setup-alire@v2
-       - name: Update apt
-         if: runner.os == 'Linux'
-         run: sudo apt-get update
-       - name: Update
-         run: alr index --update-all
-       - name: Build
-         run: alr --non-interactive build
-         
   release:
-    name: Continuous AppImage
+    name: Continuous
     runs-on: ubuntu-20.04
     steps:
        - name: Checkout
          uses: actions/checkout@v2
        - name: alr2appimage-action
          uses: mgrojo/alr2appimage-action@main
-         with:
-           alireVersion: 2.0.2
-           alr2appimageVersion: 0.9.3
-           alr2appimageArgs: "--executable open_url"
