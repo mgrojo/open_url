@@ -20,5 +20,5 @@ jobs:
        - name: alr2appimage-action
          uses: mgrojo/alr2appimage-action@main
          with:
-           alireVersion: 2.0.2
-           alr2appimageVersion: 0.9.3
+           alireVersion: 2.1.0
+           alr2appimageVersion: 1.0.0
