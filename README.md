@@ -1,3 +1,4 @@
+[![Ada](https://img.shields.io/badge/-inside-green?logo=ada&logoColor=white&labelColor=grey&logoSize=auto)](https://ada-lang.io/)
 [![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/ada-lang/Lobby)
 [![Build](https://github.com/mgrojo/open_url/actions/workflows/main.yml/badge.svg)](https://github.com/mgrojo/open_url/actions/workflows/main.yml)
 [![Download][download-img]][download]
