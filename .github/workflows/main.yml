@@ -1,5 +1,5 @@
-# Build using Alire and upload an AppImage to the GitHub releases section.
-name: Build and upload AppImage
+# Build using Alire and upload packages to the GitHub releases section.
+name: Build and upload packages
 
 on:                    # Run the workflow for each of the following events:
   push:                # - A branch is pushed or updated.
@@ -21,4 +21,5 @@ jobs:
          uses: mgrojo/alr2appimage-action@main
          with:
            alireVersion: 2.1.0
-           alr2appimageVersion: 1.0.0
+           alr2appimageVersion: 1.1.0
+           alr2appimageArgs: "-o appimage,deb,rpm --use-version --terminal"           
